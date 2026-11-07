@@ -1,0 +1,159 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How the app handles local records, diagnostic requests, permissions, report sharing, and data deletion.">
+  <title>Privacy Policy</title>
+  <style type="text/css">
+    :root {
+      color-scheme: light dark;
+      --paper: #f5f7fb;
+      --surface: #ffffff;
+      --ink: #162b4d;
+      --muted: #526078;
+      --line: #dce2eb;
+      --accent: #a9bfe6;
+      --pale: #e3e9f4;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-padding-top: 24px; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    a { color: inherit; text-underline-offset: 4px; }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible { outline: 3px solid var(--ink); outline-offset: 5px; border-radius: 2px; }
+    .skip { position: absolute; left: 20px; top: -100px; padding: 10px 16px; background: var(--surface); z-index: 2; }
+    .skip:focus { top: 12px; }
+    .page { max-width: 880px; margin: 0 auto; padding: 36px 24px 60px; }
+    .topbar, .footer { display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; align-items: center; }
+    .topbar { padding-bottom: 24px; border-bottom: 1px solid var(--line); font-size: 14px; }
+    .label { color: var(--muted); }
+    .intro { padding: 48px 0 28px; }
+    h1 { font-size: clamp(34px, 6vw, 50px); line-height: 1.12; letter-spacing: -1.5px; margin: 0 0 20px; font-weight: 600; }
+    .lead { max-width: 650px; margin: 0; font-size: 19px; color: var(--muted); }
+    .summary { background: var(--pale); border-left: 4px solid var(--accent); border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 0 0 28px; }
+    .summary p { margin: 0; }
+    .contents { padding: 22px 26px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); margin-bottom: 38px; }
+    .contents h2 { margin: 0 0 10px; font-size: 16px; }
+    .contents ul { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 24px; list-style: none; padding: 0; margin: 0; font-size: 14px; }
+    .section { padding: 0 0 24px; margin: 0 0 28px; border-bottom: 1px solid var(--line); }
+    h2 { font-size: 23px; font-weight: 600; line-height: 1.35; letter-spacing: -.4px; margin: 0 0 16px; }
+    p { margin: 0 0 14px; }
+    ul { padding-left: 22px; margin: 0 0 16px; }
+    li { padding-left: 3px; margin-bottom: 8px; }
+    .section > :last-child { margin-bottom: 0; }
+    .footer { color: var(--muted); font-size: 14px; }
+    @media (max-width: 560px) {
+      .page { padding: 24px 20px 40px; }
+      .intro { padding-top: 34px; }
+      .contents ul { grid-template-columns: 1fr; }
+      .contents, .summary { padding: 20px; }
+      h2 { font-size: 21px; }
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --paper: #101c30; --surface: #162b4d; --ink: #f5f7fb; --muted: #b8c5db; --line: #344760; --accent: #a9bfe6; --pale: #203653; }
+    }
+    @media print {
+      :root { --paper: #ffffff; --surface: #ffffff; --ink: #000000; --muted: #333333; --line: #bbbbbb; --accent: #777777; --pale: #ffffff; }
+      body { font-size: 11pt; }
+      .page { max-width: none; padding: 0; }
+      .topbar, .contents, .footer, .skip { display: none; }
+      .intro { padding-top: 0; }
+      h1 { font-size: 28pt; }
+      h2 { font-size: 16pt; break-after: avoid; }
+      p, li { orphans: 3; widows: 3; }
+      .section { margin-bottom: 18px; padding-bottom: 18px; }
+      a { text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#content">Skip to policy</a>
+  <div class="page" id="top">
+    <div class="topbar"><span class="label">Privacy &amp; Terms</span><a href="terms.html">Terms of Use</a></div>
+    <div class="intro">
+      <h1>Privacy Policy</h1>
+      <p class="lead">Understand what stays on your device and what is sent when you run a network test.</p>
+    </div>
+    <div class="summary">
+      <p>Your profiles, saved reports, and preferences are stored locally. Network tests send requests to the targets and diagnostic services they use. You choose when to export or share reports.</p>
+    </div>
+    <div class="contents">
+      <h2>In this policy</h2>
+      <ul>
+        <li><a href="#scope">Scope and eligibility</a></li>
+        <li><a href="#records">Records on your device</a></li>
+        <li><a href="#requests">Network requests</a></li>
+        <li><a href="#services">External services</a></li>
+        <li><a href="#sharing">Sharing and exports</a></li>
+        <li><a href="#controls">Permissions and controls</a></li>
+        <li><a href="#retention">Retention and deletion</a></li>
+        <li><a href="#security">Security and policy changes</a></li>
+      </ul>
+    </div>
+    <div id="content">
+      <div class="section" id="scope">
+        <h2>Scope and eligibility</h2>
+        <p>This policy describes how the network diagnostics app (the "Service") handles information when you use its tools, manage records, and export results. No account registration or app-managed cloud synchronization is required.</p>
+        <p>The Service is intended only for users who are at least 18 years of age. Anyone under 18 must not download, install, access, or use the Service.</p>
+      </div>
+      <div class="section" id="records">
+        <h2>Records on your device</h2>
+        <p>The app stores information you enter or choose to save so that you can organize networks and review diagnostic results. Depending on the features you use, this includes:</p>
+        <ul>
+          <li>Network names and profiles, target hostnames, URLs, IP addresses, ports, room labels, device records, trust labels, and notes.</li>
+          <li>Website lists, check history, manually entered data usage, and monthly budgets.</li>
+          <li>Saved diagnostic reports, including timestamps, test settings, measured performance, response headers, DNS results, certificate information, and network interface details.</li>
+          <li>Preferences such as language, data-saving settings, and automatic report saving.</li>
+        </ul>
+        <p>These records support the app's display, search, comparisons, and exports. They are stored in the app's local storage and are not automatically uploaded to a developer-operated account or report database.</p>
+      </div>
+      <div class="section" id="requests">
+        <h2>Network requests</h2>
+        <p>When you start a test, the app sends the requests needed to perform that test over your current connection, and network nodes temporarily transmit network data. Destination servers and DNS resolvers can receive your public IP address, the hostname or URL being tested, DNS query details, request timing, and protocol information relevant to the request.</p>
+        <p>Speed and load tests transfer generated test data; they do not upload your personal files as the test payload. Route and packet-size probes send diagnostic packets to the selected target. The app does not capture unrelated traffic from other apps.</p>
+        <p>Most web-based diagnostic services use HTTPS. Some checks, including the captive portal check and targets entered with an HTTP address, use unencrypted requests. Network operators may be able to observe information in those requests.</p>
+        <p>Only information required for a request is sent to its destination. The app does not attach your saved inventory, budgets, report notes, or full report history to routine diagnostic requests. A target URL itself may contain sensitive information, so avoid entering credentials or private tokens in URLs.</p>
+      </div>
+      <div class="section" id="services">
+        <h2>External services</h2>
+        <p>The services contacted depend on the tool and options you select:</p>
+        <ul>
+          <li><strong>Cloudflare:</strong> bandwidth testing and DNS-over-HTTPS queries.</li>
+          <li><strong>Google:</strong> DNS-over-HTTPS queries when the Google resolver is selected or included in a resolver comparison.</li>
+          <li><strong>Your system DNS resolver:</strong> hostname lookups using the system resolver. A CNAME lookup configured as system DNS uses Cloudflare DNS-over-HTTPS.</li>
+          <li><strong>ipify:</strong> public IP address lookups.</li>
+          <li><strong>Amazon Web Services regional endpoints:</strong> regional reachability and response-time checks.</li>
+          <li><strong>Apple endpoints:</strong> captive portal and HTTPS connectivity checks, and tests using the default Apple website target.</li>
+          <li><strong>Your selected targets:</strong> websites, hosts, and devices that you choose to test.</li>
+        </ul>
+        <p>These destinations process incoming requests under their own privacy practices and may keep server or network logs. Their retention practices are separate from the app's local storage. Deleting a local report does not delete logs held by a destination, resolver, or network operator.</p>
+      </div>
+      <div class="section" id="sharing">
+        <h2>Sharing and exports</h2>
+        <p>We do not share personal information for advertising or marketing. The app does not include advertising or third-party analytics SDKs. The diagnostic requests described above are necessary for the tests you initiate.</p>
+        <p>When you export a report, the app prepares a CSV file and opens the system share sheet. The file can contain network names, targets, timestamps, measurements, notes, parameters, and response details. Review it before selecting a recipient, app, or storage location.</p>
+        <p>Once you save or share an export, its handling depends on the destination you choose. The app cannot revoke shared copies or delete them from another app or recipient.</p>
+      </div>
+      <div class="section" id="controls">
+        <h2>Permissions and controls</h2>
+        <p>The operating system may request local network permission when you test a local address or port. You can change that permission in system settings. Denying it may prevent local network tests from working.</p>
+        <p>Device inventories are entered manually; the app does not automatically scan your local network. Network profiles do not switch your system connection. Website checks start when you initiate them and do not run automatically in the background. Data usage budgets rely on your manual entries, not system-wide traffic tracking.</p>
+        <p>You can cancel an active test, disable automatic report saving, edit or delete saved records, and choose whether to export results. Stopping a test prevents further app requests for that run but cannot recall requests already sent.</p>
+      </div>
+      <div class="section" id="retention">
+        <h2>Retention and deletion</h2>
+        <p>Saved reports and records remain in local app storage until you delete them, clear local records in Settings, or remove the app and its data. Some record-level measurement histories keep only a limited number of recent entries. There is no automatic time-based deletion schedule for saved reports.</p>
+        <p>Use the app's delete controls to remove individual records or reports. Use <strong>Clear local records</strong> in Settings to reset the app's stored records and test preferences. You can also stop using the Service and remove the app.</p>
+        <p>Exports, copies shared with others, and any backups managed by your operating system or backup provider must be managed separately. Clearing app records does not remove those copies or external service logs.</p>
+      </div>
+      <div class="section" id="security">
+        <h2>Security and policy changes</h2>
+        <p>Local records rely on the storage protections provided by your device and operating system. Keep your device protected and share reports carefully, as they can reveal information about your network. No storage or transmission method can guarantee complete security.</p>
+        <p>This policy may be revised if the app's features or data practices change. Any revised policy will be made available on this page. Where additional notice or consent is required by applicable law, it will be provided before the relevant change takes effect.</p>
+      </div>
+    </div>
+    <div class="footer"><a href="terms.html">Read the Terms of Use</a><a href="#top">Back to top</a></div>
+  </div>
+</body>
+</html>
